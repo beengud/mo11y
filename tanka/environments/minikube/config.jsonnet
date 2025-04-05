@@ -26,7 +26,7 @@ local k = import 'github.com/grafana/jsonnet-libs/ksonnet-util/kausal.libsonnet'
             + pv.spec.withStorageClassName('manual')
             + pv.spec.withCapacity({storage: '2G'})
             + pv.spec.withAccessModes(['ReadWriteOnce'])
-            + pv.spec.hostPath.withPath('/mnt/data'),
+            + pv.spec.hostPath.withPath('/data'),
         ],
 
         persistentVolumeClaims: [
