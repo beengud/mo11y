@@ -8,7 +8,7 @@ local k = import 'github.com/grafana/jsonnet-libs/ksonnet-util/kausal.libsonnet'
         deployment.new(name='backstage',
         replicas=1,
         containers =
-            container.new('backstage', 'backstage:1.0.0')
+            container.new('backstage', 'backstage:1.0.5')
             + container.withPorts([{name: 'http', containerPort: 7007}])
             + container.withEnvFrom([
                 {secretRef: {

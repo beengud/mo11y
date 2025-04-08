@@ -11,11 +11,16 @@ local k = import 'github.com/grafana/jsonnet-libs/ksonnet-util/kausal.libsonnet'
         ],
 
         secrets: [
-            secret.new('postges-secrets', data={
+            secret.new(name='postges-secrets', data={
                 'POSTGRES_USER': 'YmFja3N0YWdl',
                 'POSTGRES_PASSWORD': 'YmFja3N0YWdl',
             }, type='Opaque')
             + secret.metadata.withNamespace('backstage'),
+
+            secret.new(name='backstage-secrets', data={
+                'GITHUB_TOKEN': 'YmFja3N0YWdl',
+            }, type='Opaque')
+            + secret.metadata.withNamespace('backstage')
 
         ],
 
