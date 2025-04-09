@@ -26,7 +26,6 @@ go.work.sum
 
 # tanka
 tanka/vendor
+tanka/environments/*/charts
 
-# docs
-docs/node_modules
 

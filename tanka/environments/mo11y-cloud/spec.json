@@ -2,9 +2,12 @@
   "apiVersion": "tanka.dev/v1alpha1",
   "kind": "Environment",
   "metadata": {
-    "name": "mo11y-edge"
+    "name": "minikube"
   },
   "spec": {
+    "contextNames": [
+      "minikube"
+    ],
     "namespace": "default",
     "resourceDefaults": {},
     "expectVersions": {}
