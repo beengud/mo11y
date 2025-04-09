@@ -5,7 +5,7 @@ local common = import 'common.libsonnet';
 {
     tempo: helm.template(
         name="tempo",
-        chart='./charts/tempo',
+        chart='./charts/tempo-distributed',
         conf={
             namespace: 'monitoring',
             values: {

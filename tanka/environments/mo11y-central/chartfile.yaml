@@ -21,4 +21,6 @@ requires:
   version: 2.4.1
 - chart: prometheus_community/kube-prometheus-stack
   version: 70.4.2
+- chart: grafana/tempo-distributed
+  version: 1.35.0
 version: 1
